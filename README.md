@@ -1,3 +1,9 @@
+# Screen & Webcam Recorder - OpenStream
+
+More about this project in this doc: https://docs.google.com/document/d/1Xpya6dcpieb21EmNE0-Mah7I8RzS6q4HO6ayqpE3PU4/
+
+---
+
 # Hello World Chrome Extension
 
 ## Description
