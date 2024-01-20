@@ -2,11 +2,17 @@
 
 ## Description
 
-Please provide a brief description of the change and mention the issue it addresses.Also, include relevant motivation and context. List any dependencies that are required for this change.
+<!-- Please provide a brief description of the change and mention the issue it addresses.Also, include relevant motivation and context. List any dependencies that are required for this change.
 
-Please delete options that are not relevant and please make sure that you X the appropriate boxes.
+Please delete options that are not relevant and please make sure that you X the appropriate boxes. -->
 
-Fixes # (issue)
+## Related Tickets and Documents
+
+<!-- Please use the following format(s) to link your issue(s):
+
+Closes # issue number (e.g, 123)
+
+Relates to # issue number (e.g, 123) -->
 
 ## Type of change
 
@@ -16,11 +22,11 @@ Fixes # (issue)
 -   [ ] This change requires a documentation update
 
 ## Screenshots (if applicable)
-Include screenshots or GIFs showcasing the changes made, especially if they impact the visual aspects of the app.
+<!-- Include screenshots or GIFs showcasing the changes made, especially if they impact the visual aspects of the app. -->
 
 ## Testing Done
 
-Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Also, mention any important details about your testing setup. If you used a testing tool like Jest or Mocha in JavaScript, please let us know.
+<!-- Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Also, mention any important details about your testing setup. If you used a testing tool like Jest or Mocha in JavaScript, please let us know. -->
 
 -   [ ] Test A
 -   [ ] Test B
@@ -38,6 +44,8 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 -   SDK:
 
 ## Checklist
+
+<!-- Check all that apply -->
 
 -   [ ] My code follows the style guidelines of this project
 -   [ ] I have performed a self-review of my own code
