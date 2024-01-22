@@ -2,9 +2,7 @@
 
 ## Description
 
-<!-- Please provide a brief description of the change and mention the issue it addresses.Also, include relevant motivation and context. List any dependencies that are required for this change.
-
-Please delete options that are not relevant and please make sure that you X the appropriate boxes. -->
+<!-- Provide a clear and concise description of the change and state the issue it addresses. Include relevant motivation and context.-->
 
 ## Related Tickets and Documents
 
@@ -22,26 +20,15 @@ Relates to # issue number (e.g, 123) -->
 -   [ ] This change requires a documentation update
 
 ## Screenshots (if applicable)
-<!-- Include screenshots or GIFs showcasing the changes made, especially if they impact the visual aspects of the app. -->
 
-## Testing Done
+<!-- Include screenshot(s) showing the result of the changes made. This allows reviewers to verify if it has achieved the intended result. -->
 
-<!-- Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Also, mention any important details about your testing setup. If you used a testing tool like Jest or Mocha in JavaScript, please let us know. -->
+## Has Change Been Tested?
+
+<!-- If it fixes a bug or adds a feature, tell us what test(s) you did to verify that your changes work. Please provide steps to reproduce.Include information about your development environment, e.g., Browser, operating system. -->
 
 -   [ ] Test A
 -   [ ] Test B
-
-**Test Configuration**:
-
--   Hardware:
-
--   Operating System:
-
--   Toolchain:
-
--   Browser:
-
--   SDK:
 
 ## Checklist
 
@@ -50,9 +37,6 @@ Relates to # issue number (e.g, 123) -->
 -   [ ] My code follows the style guidelines of this project
 -   [ ] I have performed a self-review of my own code
 -   [ ] I have commented my code, particularly in hard-to-understand areas
--   [ ] I have made corresponding changes to the documentation
 -   [ ] My changes generate no new warnings
 -   [ ] I have added tests that prove my fix is effective or that my feature works
--   [ ] New and existing unit tests pass locally with my changes
--   [ ] Any dependent changes have been merged and published in downstream modules
 -   [ ] I have checked my code and corrected any misspellings
