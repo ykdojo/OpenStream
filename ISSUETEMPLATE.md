@@ -8,6 +8,7 @@ about: Create a report to help us improve
 
 - [ ] Bug Report
 - [ ] Feature Request
+- [ ] Question
 
 ## Description
 [Provide a clear and concise description of the issue or feature request.]
