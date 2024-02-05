@@ -1,20 +1,16 @@
 ---
-name: Bug Report or Feature Request
+name: Bug Report form
 about: Create a report to help us improve
 
 ---
 
-## Issue Type
-
-- [ ] Bug Report
-- [ ] Feature Request
-- [ ] Question
+## Bug Report
 
 ## Description
-[Provide a clear and concise description of the issue or feature request.]
+[Provide a clear and concise description of the issue.]
 
-## Steps to Reproduce (for bugs)
-[If it's a bug, please provide steps to reproduce the issue.]
+## Steps to Reproduce
+[Provide steps to reproduce the bug.]
 
 1. Go to '...'
 2. Click on '....'
@@ -25,10 +21,10 @@ about: Create a report to help us improve
 [A clear and concise description of what you expected to happen.]
 
 ## Screenshots (if applicable)
-[Add screenshots to help explain your problem.]
+[Add screenshots to help explain the problem.]
 
 ## Additional context
-[Add any other context about the problem or feature request.]
+[Add any other context about the bug.]
 
 ## Environment
 [Include information about your environment, e.g., Chrome version, operating system.]
