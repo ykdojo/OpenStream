@@ -1,4 +1,4 @@
-Bug Report form
+name: Bug Report form
 about: Create a report to help us improve
 
 ---
