@@ -1,5 +1,4 @@
-name: Bug Report or Feature Request
-name: Bug Report form
+Bug Report form
 about: Create a report to help us improve
 
 ---
