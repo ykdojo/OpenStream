@@ -2,7 +2,7 @@ body, html {
     width: 600px; 
     height: 800px; 
     margin: 0;
-    padding: 10px;
+    padding-top: 10px;
     background-color: #f0f0f0; 
 }
 
