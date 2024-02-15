@@ -29,8 +29,9 @@ After installation, click on the extension icon in the Chrome toolbar to open th
 
 ## Development
 
-- This extension uses **Plasmo Framework** with **React** and **Typescript**.
+- This extension uses [**Plasmo Framework**](https://docs.plasmo.com/framework) with **React** and **Typescript**.
 - The entry point is `popup.tsx`.
+- Manifest override can be done in `"manifest"` field in `package.json`.
 
 ## Contributing
 
