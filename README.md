@@ -3,15 +3,11 @@
 More about this project in this doc: https://docs.google.com/document/d/1Xpya6dcpieb21EmNE0-Mah7I8RzS6q4HO6ayqpE3PU4/
 
 ---
-
-# Hello World Chrome Extension
-
 ## Description
 
-This is a simple "Hello World" Chrome extension demonstrating basic functionality such as opening a popup, capturing screenshots, and interacting with the user.
+OpenStream is an open-source project for creating a free tool that records screen and webcam footage simultaneously. It's designed for content creators and developed collaboratively through our community on Discord.
 
 ## Features
-
 - **Popup Interface**: Click on the extension icon to open a popup window.
 - **Capture Screenshot**: Ability to capture a screenshot of the current tab.
 - **User Interaction**: A minimal user interface to interact with the extension.
@@ -21,9 +17,11 @@ This is a simple "Hello World" Chrome extension demonstrating basic functionalit
 To install this extension in your Chrome browser, follow these steps:
 
 1. **Download or Clone the Repository**: Download this repository to your local machine or use `git clone`.
-2. **Open Chrome Extensions**: Go to `chrome://extensions/` in your Chrome browser.
-3. **Enable Developer Mode**: Toggle on the "Developer mode" at the top right of the extensions page.
-4. **Load the Extension**: Click on "Load unpacked" and select the directory where you cloned or extracted this repository.
+2. **Install Dependencies** Run `pnpm i`
+3. **Start Dev Server** Run `pnpm dev`
+4. **Open Chrome Extensions**: Go to `chrome://extensions/` in your Chrome browser.
+5. **Enable Developer Mode**: Toggle on the "Developer mode" at the top right of the extensions page.
+6. **Load the Extension**: Click on "Load unpacked" and select the `build/chrome-mv3-dev` directory.
 
 ## Usage
 
@@ -31,12 +29,8 @@ After installation, click on the extension icon in the Chrome toolbar to open th
 
 ## Development
 
-This extension is developed using basic HTML, CSS, and JavaScript. The source code is structured as follows:
-
-- `manifest.json`: The manifest file for the Chrome extension.
-- `popup.html`: The HTML file for the popup interface.
-- `popup.js`: The JavaScript file handling the extension's logic.
-- `popup.css`: The CSS file for styling the popup.
+- This extension uses **Plasmo Framework** with **React** and **Typescript**.
+- The entry point is `popup.tsx`.
 
 ## Contributing
 
