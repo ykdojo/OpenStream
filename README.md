@@ -16,9 +16,9 @@ OpenStream is an open-source project for creating a free tool that records scree
 
 To install this extension in your Chrome browser, follow these steps:
 
-1. **Download or Clone the Repository**: Download this repository to your local machine or use `git clone`.
-2. **Install Dependencies** Run `pnpm i`
-3. **Start Dev Server** Run `pnpm dev`
+1. **Download or Clone the Repository:**: Download this repository to your local machine or use `git clone`.
+2. **Install Dependencies:** Run `pnpm i`
+3. **Start Dev Server:** Run `pnpm dev`
 4. **Open Chrome Extensions**: Go to `chrome://extensions/` in your Chrome browser.
 5. **Enable Developer Mode**: Toggle on the "Developer mode" at the top right of the extensions page.
 6. **Load the Extension**: Click on "Load unpacked" and select the `build/chrome-mv3-dev` directory.
