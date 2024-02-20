@@ -1,6 +1,8 @@
 # Screen & Webcam Recorder - OpenStream
 
-More about this project in this doc: https://docs.google.com/document/d/1Xpya6dcpieb21EmNE0-Mah7I8RzS6q4HO6ayqpE3PU4/
+More info on how to join this project in this doc: https://docs.google.com/document/d/1Xpya6dcpieb21EmNE0-Mah7I8RzS6q4HO6ayqpE3PU4/
+
+Detailed information regarding this project plan can be found in this doc: https://docs.google.com/document/d/15SNuBZt5T5TQWcdfDaH5MRrNlB_UEXSeflmZHyhFKYQ/edit#heading=h.qbzupwo3utja
 
 ---
 ## Description
