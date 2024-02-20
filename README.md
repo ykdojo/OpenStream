@@ -31,7 +31,7 @@ After installation, click on the extension icon in the Chrome toolbar to open th
 
 ## Development
 
-- This extension uses [**Plasmo Framework**](https://docs.plasmo.com/framework) with **React** and **Typescript**.
+- This extension uses [**Plasmo Framework**](https://docs.plasmo.com/framework) with **React** and **TypeScript**.
 - The entry point is `popup.tsx` (Think of this like main entry point in normal React App).
 - All of the manifest config lives in `"manifest"` field in `package.json`.
 
