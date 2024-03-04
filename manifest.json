@@ -3,9 +3,19 @@
     "name": "Take ScreenShot",
     "version": "1.0",
     "description": "A simple 'Hello World' Chrome extension to take screenshot",
-    "permissions": ["activeTab", "tabs"],
+    "background": {
+      "scripts": [
+        "background.js"
+      ],
+      "persistent": true
+    },
+    "permissions": [
+      "https://*/*",
+      "http://*/*",
+      "tabs"
+    ],
     "browser_action": {
-      "default_popup": "popup.html"
+      "default_title": "Inject!"
     }
   }
   
