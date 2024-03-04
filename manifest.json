@@ -1,21 +1,18 @@
 {
     "manifest_version": 2,
-    "name": "Take ScreenShot",
+    "name": "Twitch chat pop out",
     "version": "1.0",
-    "description": "A simple 'Hello World' Chrome extension to take screenshot",
+    "description": "A simple Chrome extension to pop out Twitch chat",
     "background": {
       "scripts": [
         "background.js"
       ],
-      "persistent": true
+      "persistent": false
     },
     "permissions": [
-      "https://*/*",
-      "http://*/*",
-      "tabs"
     ],
     "browser_action": {
-      "default_title": "Inject!"
+      "default_title": "Pop out Twitch chat"
     }
   }
   
