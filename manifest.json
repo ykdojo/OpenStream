@@ -11,6 +11,9 @@
     },
     "permissions": [
     ],
+    "icons_commented_out": {
+      "48": "48x48.png"
+    },
     "browser_action": {
       "default_title": "Pop out Twitch chat"
     },
