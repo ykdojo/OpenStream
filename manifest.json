@@ -10,9 +10,25 @@
       "persistent": false
     },
     "permissions": [
+      "activeTab",
+      "<all_urls>"
+    ],
+    "host_permissions": [
+      "https://www.twitch.tv/popout/ykdojo/chat"
     ],
     "browser_action": {
       "default_title": "Pop out Twitch chat"
-    }
+    },
+    "web_accessible_resources": [
+      "hideChatHeader.css"
+    ],
+    "content_scripts": [
+      {
+        "all_frames": true,
+        "matches": [ "*://*/*" ],
+        "js": ["contentScript.js"],
+        "css": ["hideChatHeader.css"]
+      }
+    ]
   }
   
