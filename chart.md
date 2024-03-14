@@ -32,7 +32,14 @@ No -> R or MATLAB
 
     For R or MATLAB: Do you think imagine yourself being in the movie Moneyball? Yes -> R. No -> MATLAB.
 
-
 Non-visual --> |No| Non-data-nerd[Go, Ruby, Rust, Java, PHP, Bash]
 
 First question: Do you want to make money? Yes -> [Java, PHP] No -> [Go, Ruby, Bash, Rust]
+
+    For Java or PHP: Do you like office politics? Yes -> Java, No -> PHP
+
+    For [Go, Ruby, Bash, Rust]: Are you good-looking? Yes -> [Go, Ruby], No -> [Bash, Rust]
+
+        For [Go, Ruby] -> Do you think you're super cool? Yes -> Ruby, No -> Go
+
+    For [Bash, Rust] -> Are you a little too obsessive? Yes -> Bash, No -> Rust
