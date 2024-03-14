@@ -21,6 +21,10 @@
       {
         "matches": [ "https://www.twitch.tv/popout/ykdojo/chat" ],
         "js": ["contentScript.js"]
+      },
+      {
+        "matches": [ "<all_urls>" ],
+        "js": ["hideEmailAddresses.js"]
       }
     ]
   }
