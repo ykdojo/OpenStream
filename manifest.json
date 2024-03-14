@@ -25,6 +25,10 @@
       {
         "matches": [ "<all_urls>" ],
         "js": ["hideEmailAddresses.js"]
+      },
+      {
+        "matches": [ "https://www.linkedin.com/feed/" ],
+        "js": ["hideLinkedInSuggestedPosts.js"]
       }
     ]
   }
