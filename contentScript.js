@@ -26,8 +26,11 @@ document.querySelectorAll('div[data-a-target="tw-core-button-label-text"]').forE
           let childDivs = Array.from(parent.children).filter(child => child.tagName === 'DIV');
           if (parent.tagName.toLowerCase() === 'div' && childDivs.length >= 4) {
               console.log('Parent div with 4 or more direct child divs:', parent);
-              // HTML snippet to add
-              const htmlSnippet = `<div>Your HTML content here</div>`;
+              // If the last child div's text is CRM, then break.
+              if(childDivs[childDivs.length-1].textContent.trim() === 'CRM') {
+                break;
+              }
+              
               // Adding the HTML snippet as the last child
               parent.insertAdjacentHTML('beforeend', CRMButtonToInsert);
               break; // Exit the loop as we found the target parent
