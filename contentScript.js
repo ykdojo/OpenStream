@@ -42,8 +42,10 @@ viewerCard.querySelectorAll('div[data-a-target="tw-core-button-label-text"]').fo
               const crmButton = document.getElementById('twitch-crm-button');
               // Add click listener
               crmButton.addEventListener('click', () => {
-                // Call CRM integration API
-                alert(username);
+                // Instead of using alert, we need to use prompt to say:
+                // What we know about {username} is: <something here>
+                // If you'd like to update it, submit the new info below.
+                const newChatterInfo = prompt(`What we know about ${username} is: <something here> \nIf you'd like to update it, submit the new info below.`, "");
               });
               break; // Exit the loop as we found the target parent
           }
