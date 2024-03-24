@@ -9,7 +9,7 @@ const CRMButtonToInsert = `<div class="Layout-sc-1xcs6mc-0" style="margin-left:5
           <div class="Layout-sc-1xcs6mc-0"><button
                   class="ScCoreButton-sc-ocjdkq-0 ScCoreButtonPrimary-sc-ocjdkq-1 bTXTVH gmCwLG">
                   <div class="ScCoreButtonLabel-sc-s7h2b7-0 gPDjGr">
-                      <div data-a-target="tw-core-button-label-text" class="Layout-sc-1xcs6mc-0 bFxzAY">CRM
+                      <div data-a-target="tw-core-button-label-text" id="twitch-crm-button" class="Layout-sc-1xcs6mc-0 bFxzAY">CRM
                       </div>
                   </div>
               </button></div>
@@ -18,6 +18,8 @@ const CRMButtonToInsert = `<div class="Layout-sc-1xcs6mc-0" style="margin-left:5
 </div>`
 
 const viewerCard = document.getElementById('VIEWER_CARD_ID');
+
+const username = viewerCard.querySelector('a.tw-link').textContent;
 
 viewerCard.querySelectorAll('div[data-a-target="tw-core-button-label-text"]').forEach(function(element) {
   if (element.textContent.trim() === "Invite") {
@@ -35,14 +37,17 @@ viewerCard.querySelectorAll('div[data-a-target="tw-core-button-label-text"]').fo
               
               // Adding the HTML snippet as the last child
               parent.insertAdjacentHTML('beforeend', CRMButtonToInsert);
+
+              // Find the div with twitch-crm-button id, and assign a listener that gets triggered when clicked
+              const crmButton = document.getElementById('twitch-crm-button');
+              // Add click listener
+              crmButton.addEventListener('click', () => {
+                // Call CRM integration API
+                alert(username);
+              });
               break; // Exit the loop as we found the target parent
           }
           parent = parent.parentElement;
       }
   }
 });
-
-// First, identify and locate a div with the ID VIEWER_CARD_ID.
-// Then, find the a element wiht the tw-link class and console.log the text in it.
-const usernameLink = viewerCard.querySelector('a.tw-link');
-console.log(usernameLink.textContent);
