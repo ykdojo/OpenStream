@@ -17,7 +17,9 @@ const CRMButtonToInsert = `<div class="Layout-sc-1xcs6mc-0" style="margin-left:5
   </div>
 </div>`
 
-document.querySelectorAll('div[data-a-target="tw-core-button-label-text"]').forEach(function(element) {
+const viewerCard = document.getElementById('VIEWER_CARD_ID');
+
+viewerCard.querySelectorAll('div[data-a-target="tw-core-button-label-text"]').forEach(function(element) {
   if (element.textContent.trim() === "Invite") {
       console.log('element found');
       let parent = element.parentElement;
@@ -42,6 +44,5 @@ document.querySelectorAll('div[data-a-target="tw-core-button-label-text"]').forE
 
 // First, identify and locate a div with the ID VIEWER_CARD_ID.
 // Then, find the a element wiht the tw-link class and console.log the text in it.
-const viewerCard = document.getElementById('VIEWER_CARD_ID');
 const usernameLink = viewerCard.querySelector('a.tw-link');
 console.log(usernameLink.textContent);
