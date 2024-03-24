@@ -6,10 +6,10 @@ if (header) {
 const CRMButtonToInsert = `<div class="Layout-sc-1xcs6mc-0" style="margin-left:5px">
   <div class="InjectLayout-sc-1i43xsx-0 kBtJDm viewer-card-drag-cancel">
       <div class="Layout-sc-1xcs6mc-0 cajBtn">
-          <div class="Layout-sc-1xcs6mc-0"><button
+          <div class="Layout-sc-1xcs6mc-0"><button id="twitch-crm-button"
                   class="ScCoreButton-sc-ocjdkq-0 ScCoreButtonPrimary-sc-ocjdkq-1 bTXTVH gmCwLG">
                   <div class="ScCoreButtonLabel-sc-s7h2b7-0 gPDjGr">
-                      <div data-a-target="tw-core-button-label-text" id="twitch-crm-button" class="Layout-sc-1xcs6mc-0 bFxzAY">CRM
+                      <div data-a-target="tw-core-button-label-text" class="Layout-sc-1xcs6mc-0 bFxzAY">CRM
                       </div>
                   </div>
               </button></div>
