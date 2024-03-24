@@ -40,4 +40,8 @@ document.querySelectorAll('div[data-a-target="tw-core-button-label-text"]').forE
   }
 });
 
-// TODO next: identify the chatter's username
+// First, identify and locate a div with the ID VIEWER_CARD_ID.
+// Then, find the a element wiht the tw-link class and console.log the text in it.
+const viewerCard = document.getElementById('VIEWER_CARD_ID');
+const usernameLink = viewerCard.querySelector('a.tw-link');
+console.log(usernameLink.textContent);
