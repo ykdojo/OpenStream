@@ -42,10 +42,18 @@ viewerCard.querySelectorAll('div[data-a-target="tw-core-button-label-text"]').fo
               const crmButton = document.getElementById('twitch-crm-button');
               // Add click listener
               crmButton.addEventListener('click', () => {
+                // Retrieve the info we have about username from localStorage
+                const existingInfo = localStorage.getItem(username) ? localStorage.getItem(username) : "still a mystery to be discovered...";
+
                 // Instead of using alert, we need to use prompt to say:
                 // What we know about {username} is: <something here>
                 // If you'd like to update it, submit the new info below.
-                const newChatterInfo = prompt(`What we know about ${username} is: <something here> \nIf you'd like to update it, submit the new info below.`, "");
+                const newChatterInfo = prompt(`What we know about ${username} is: ${existingInfo} \n\nIf you'd like to update it, submit the new info below.`, existingInfo);
+
+                // Save the updated info back to localStorage
+                if (newChatterInfo) {
+                  localStorage.setItem(username, newChatterInfo);
+                }
               });
               break; // Exit the loop as we found the target parent
           }
