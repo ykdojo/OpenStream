@@ -22,7 +22,9 @@ function addTwitchCRMButton () {
 
   if (!viewerCard) return;
 
+  const twitchCRMPrefix = 'twitch-crm-';
   const username = viewerCard.querySelector('a.tw-link').textContent;
+  const nameForStorage = `${twitchCRMPrefix}${username}`;
 
   viewerCard.querySelectorAll('div[data-a-target="tw-core-button-label-text"]').forEach(function(element) {
     if (element.textContent.trim() === "Invite") {
@@ -46,7 +48,7 @@ function addTwitchCRMButton () {
                 // Add click listener
                 crmButton.addEventListener('click', () => {
                   // Retrieve the info we have about username from localStorage
-                  const existingInfo = localStorage.getItem(username) ? localStorage.getItem(username) : "still a mystery to be discovered...";
+                  const existingInfo = localStorage.getItem(nameForStorage) ? localStorage.getItem(nameForStorage) : "still a mystery to be discovered...";
 
                   // Instead of using alert, we need to use prompt to say:
                   // What we know about {username} is: <something here>
@@ -55,7 +57,7 @@ function addTwitchCRMButton () {
 
                   // Save the updated info back to localStorage
                   if (newChatterInfo) {
-                    localStorage.setItem(username, newChatterInfo);
+                    localStorage.setItem(nameForStorage, newChatterInfo);
                   }
                 });
                 break; // Exit the loop as we found the target parent
@@ -86,3 +88,6 @@ function handleDynamicContent() {
 }
 
 handleDynamicContent(); // Listen for dynamic content like popups
+
+// Filter Object.keys(localStorage) with the prefix
+// const allUser = Object.keys(localStorage).filter(key => key.startsWith(twitchCRMPrefix));
