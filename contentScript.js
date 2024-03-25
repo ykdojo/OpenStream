@@ -89,5 +89,24 @@ function handleDynamicContent() {
 
 handleDynamicContent(); // Listen for dynamic content like popups
 
-// Filter Object.keys(localStorage) with the prefix
-// const allUser = Object.keys(localStorage).filter(key => key.startsWith(twitchCRMPrefix));
+// const twitchCRMPrefix = 'twitch-crm-';
+// const allUsersWithValues = Object.keys(localStorage).reduce((acc, key) => {
+//   if (key.startsWith(twitchCRMPrefix)) {
+//     acc[key] = localStorage.getItem(key);
+//   }
+//   return acc;
+// }, {});
+
+// // Convert the result to JSON
+// const json = JSON.stringify(allUsersWithValues);
+
+// // Create a Blob with the JSON content
+// const blob = new Blob([json], {type: 'application/json'});
+
+// // Create a link and trigger the download
+// const a = document.createElement('a');
+// a.href = URL.createObjectURL(blob);
+// a.download = 'twitchCRMBackup.json'; // Name of the file to be downloaded
+// document.body.appendChild(a); // Append the link to the body (required for Firefox)
+// a.click();
+// document.body.removeChild(a); // Clean up
