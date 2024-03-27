@@ -1,5 +1,5 @@
 500 = hydrate
-5000 = name a git branch (no profanity)
+5000 = name a git branch (no profanity, no contract)
 7500 = roast my LinkedIn
 10000 = solve leetcode easy
 20000 = solve leetcode medium
