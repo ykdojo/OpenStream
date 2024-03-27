@@ -5,3 +5,5 @@
 20000 = solve leetcode medium
 50000 = solve leetcode hard
 100000 = 10 minute consultation call (on stream)
+
+Maybe: 1000000 = flights to Vancouver ($1000 CAD max - a few people)
