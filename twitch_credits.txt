@@ -1,5 +1,6 @@
 500 = hydrate
-5000 = roast my LinkedIn
+5000 = name a git branch (no profanity)
+7500 = roast my LinkedIn
 10000 = solve leetcode easy
 20000 = solve leetcode medium
 50000 = solve leetcode hard
