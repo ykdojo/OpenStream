@@ -1,6 +1,13 @@
 function hideLinkedInSuggestedPosts(root = document.body) {
+  console.log('Hiding LinkedIn suggested posts');
+  console.log('root is', root);
+
   // Select all span elements within divs that match the specified classes
-  const spans = root.querySelectorAll('div.update-components-text-view.break-words > span');
+  const spans = root.querySelectorAll('span');
+  // If root is a span, add it to spans
+  if (root.tagName === 'SPAN') {
+    spans = [root, ...spans];
+  }
 
   // Filter spans that exactly contain the text "Suggested"
   const suggestedSpans = Array.from(spans).filter(span => span.textContent.trim() === 'Suggested');
@@ -25,9 +32,10 @@ function handleDynamicContent() {
   const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
           if (mutation.addedNodes.length) {
-              console.log('node added');
               mutation.addedNodes.forEach((node) => {
-                  hideLinkedInSuggestedPosts(node);
+                  if (node.tagName === 'SPAN') {
+                    hideLinkedInSuggestedPosts(node);
+                  }
               });
           }
       });
