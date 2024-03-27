@@ -1,0 +1,6 @@
+500 = hydrate
+5000 = roast my LinkedIn
+10000 = solve leetcode easy
+20000 = solve leetcode medium
+50000 = solve leetcode hard
+100000 = 10 minute consultation call (on stream)
