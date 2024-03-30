@@ -24,7 +24,7 @@
       },
       {
         "matches": [ "https://www.linkedin.com/feed/" ],
-        "js": ["hideLinkedInSuggestedPosts.js"]
+        "js": ["hideLinkedInFeed.js"]
       }
     ]
   }
