@@ -6,7 +6,7 @@ function hideLinkedInSuggestedPosts(root = document.body) {
     // Early return or handle the case when root.querySelectorAll doesn't exist
     return;
   }
-  
+
   // Select all span elements within divs that match the specified classes
   const spans = root.querySelectorAll('span');
   // If root is a span, add it to spans
@@ -15,9 +15,9 @@ function hideLinkedInSuggestedPosts(root = document.body) {
   }
 
   // Filter spans that exactly contain the text "Suggested"
-  console.log('all spans:', spans);
+  // console.log('all spans:', spans);
   const suggestedSpans = Array.from(spans).filter(span => span.textContent.trim() === 'Suggested');
-  console.log('suugested spans:', suggestedSpans);
+  // console.log('suugested spans:', suggestedSpans);
 
   // Log the filtered spans
   suggestedSpans.forEach(span => {
