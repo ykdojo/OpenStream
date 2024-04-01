@@ -19,9 +19,17 @@ function IndexPopup() {
         const displayMediaOptions = { video: true };
         const stream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
 
-        // Setup MediaRecorder to record the captured stream
-        const mediaRecorder = new MediaRecorder(stream);
+        // Specify MediaRecorder options
+        const options = {
+          mimeType: 'video/webm; codecs=vp9',
+          videoBitsPerSecond: 2500000, // Adjust as needed
+          audioBitsPerSecond: 128000 // Adjust as needed
+        };
+
+        // Setup MediaRecorder with custom options
+        const mediaRecorder = new MediaRecorder(stream, options);
         let chunks = [];
+
         mediaRecorder.ondataavailable = e => chunks.push(e.data);
         mediaRecorder.onstop = e => {
           const completeBlob = new Blob(chunks, { type: chunks[0].type });
@@ -58,7 +66,7 @@ function IndexPopup() {
   return (
     <div className="container">
       <button id="captureButton" onClick={captureSV}>
-        Capture Screen Video!!!
+        Capture Screen Video!
       </button>
       <img
         id="screenshotImg"
