@@ -16,7 +16,12 @@ function IndexPopup() {
     async function startRecording() {
       try {
         // Request screen capture
-        const displayMediaOptions = { video: true };
+        const displayMediaOptions = {
+          video: {
+            frameRate: { ideal: 60 }
+          }
+        };
+        
         const stream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
 
         // Specify MediaRecorder options
@@ -66,7 +71,7 @@ function IndexPopup() {
   return (
     <div className="container">
       <button id="captureButton" onClick={captureSV}>
-        Capture Screen Video!
+        Capture Screen Video
       </button>
       <img
         id="screenshotImg"
