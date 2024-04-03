@@ -2,19 +2,30 @@ import "./popup.css"
 import React, { useRef } from "react"
 
 function IndexPopup() {
+  const screenRef = useRef(null);
   const videoRef = useRef(null);
+  // Request screen capture
+  const displayMediaOptions = {
+    video: {
+      frameRate: { ideal: 60 }
+    }
+  };
+
+  setVideoRefs();
+
+  async function setVideoRefs() {
+    const stream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    const webcamStream = await navigator.mediaDevices.getUserMedia({ video: true });
+    if (screenRef.current) screenRef.current.srcObject = stream;
+    if (videoRef.current) videoRef.current.srcObject = webcamStream;
+  }
+
   function captureSV() {
     async function startRecording() {
       try {
-        // Request screen capture
-        const displayMediaOptions = {
-          video: {
-            frameRate: { ideal: 60 }
-          }
-        };
-        
         const stream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
         const webcamStream = await navigator.mediaDevices.getUserMedia({ video: true });
+        if (screenRef.current) screenRef.current.srcObject = stream;
         if (videoRef.current) videoRef.current.srcObject = webcamStream;
 
         // Specify MediaRecorder options
@@ -77,10 +88,15 @@ function IndexPopup() {
 
   return (
     <div className="container">
-      <button id="captureButton" onClick={captureSV}>
+      <button id="captureButton" onClick={captureSV} style={{marginBottom: "5px"}}>
         Capture Screen Video
       </button>
-      <video ref={videoRef} autoPlay style={{ width: "300px" }}></video>
+      <div style={{marginBottom: "5px"}}>
+        <video ref={screenRef} autoPlay style={{ width: "600px" }}></video>
+      </div>
+      <div>
+        <video ref={videoRef} autoPlay style={{ width: "250px" }}></video>
+      </div>
     </div>
   )
 }
