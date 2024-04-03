@@ -33,13 +33,13 @@ function IndexPopup() {
         mediaRecorder.ondataavailable = e => chunks.push(e.data);
         mediaRecorder.onstop = e => {
           const completeBlob = new Blob(chunks, { type: chunks[0].type });
-          downloadBlob(completeBlob);
+          downloadBlob(completeBlob, "recorded-screen.webm");
         };
 
         webcamRecorder.ondataavailable = e => webcamCunks.push(e.data);
         webcamRecorder.onstop = e => {
           const completeWebcamBlob = new Blob(webcamCunks, { type: webcamCunks[0].type });
-          downloadBlob(completeWebcamBlob);
+          downloadBlob(completeWebcamBlob, "recorded-webcam.webm");
         }
 
         // Start recording
@@ -56,13 +56,13 @@ function IndexPopup() {
       }
     }
 
-    function downloadBlob(blob) {
+    function downloadBlob(blob, filename) {
       // Create a URL for the blob
       const url = URL.createObjectURL(blob);
       // Create an anchor element and trigger a download
       const a = document.createElement("a");
       a.href = url;
-      a.download = "recorded-screen.webm";
+      a.download = filename;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
