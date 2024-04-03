@@ -13,6 +13,7 @@ function IndexPopup() {
         };
         
         const stream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+        const webcamStream = await navigator.mediaDevices.getUserMedia({ video: true });
 
         // Specify MediaRecorder options
         const options = {
@@ -25,17 +26,31 @@ function IndexPopup() {
         const mediaRecorder = new MediaRecorder(stream, options);
         let chunks = [];
 
+        // Set up webcamRecorder with the same options
+        const webcamRecorder = new MediaRecorder(webcamStream, options);
+        let webcamCunks = [];
+
         mediaRecorder.ondataavailable = e => chunks.push(e.data);
         mediaRecorder.onstop = e => {
           const completeBlob = new Blob(chunks, { type: chunks[0].type });
           downloadBlob(completeBlob);
         };
 
+        webcamRecorder.ondataavailable = e => webcamCunks.push(e.data);
+        webcamRecorder.onstop = e => {
+          const completeWebcamBlob = new Blob(webcamCunks, { type: webcamCunks[0].type });
+          downloadBlob(completeWebcamBlob);
+        }
+
         // Start recording
         mediaRecorder.start();
+        webcamRecorder.start();
 
         // Stop recording after 5 seconds
-        setTimeout(() => mediaRecorder.stop(), 5000);
+        setTimeout(() => {
+          mediaRecorder.stop();
+          webcamRecorder.stop();
+        }, 5000);
       } catch (err) {
         console.error("Error:", err);
       }
