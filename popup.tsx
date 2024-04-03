@@ -1,7 +1,8 @@
 import "./popup.css"
-import React from "react"
+import React, { useRef } from "react"
 
 function IndexPopup() {
+  const videoRef = useRef(null);
   function captureSV() {
     async function startRecording() {
       try {
@@ -14,6 +15,7 @@ function IndexPopup() {
         
         const stream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
         const webcamStream = await navigator.mediaDevices.getUserMedia({ video: true });
+        if (videoRef.current) videoRef.current.srcObject = webcamStream;
 
         // Specify MediaRecorder options
         const options = {
@@ -76,8 +78,9 @@ function IndexPopup() {
   return (
     <div className="container">
       <button id="captureButton" onClick={captureSV}>
-        Capture Screen Video!
+        Capture Screen Video
       </button>
+      <video ref={videoRef} autoPlay style={{ width: "300px" }}></video>
     </div>
   )
 }
