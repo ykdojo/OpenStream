@@ -15,7 +15,11 @@ function IndexPopup() {
 
   async function setVideoRefs() {
     const stream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-    const webcamStream = await navigator.mediaDevices.getUserMedia({ video: true });
+    const webcamStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+    // Combine audio from webcamStream with video in stream for screen recording
+    if (webcamStream.getAudioTracks().length > 0) {
+      stream.addTrack(webcamStream.getAudioTracks()[0]);
+    }
     if (screenRef.current) screenRef.current.srcObject = stream;
     if (videoRef.current) videoRef.current.srcObject = webcamStream;
   }
@@ -24,7 +28,11 @@ function IndexPopup() {
     async function startRecording() {
       try {
         const stream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-        const webcamStream = await navigator.mediaDevices.getUserMedia({ video: true });
+        const webcamStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+        // Combine audio from webcamStream with video in stream for screen recording
+        if (webcamStream.getAudioTracks().length > 0) {
+          stream.addTrack(webcamStream.getAudioTracks()[0]);
+        }
         if (screenRef.current) screenRef.current.srcObject = stream;
         if (videoRef.current) videoRef.current.srcObject = webcamStream;
 
@@ -92,10 +100,10 @@ function IndexPopup() {
         Capture Screen Video
       </button>
       <div style={{marginBottom: "5px"}}>
-        <video ref={screenRef} autoPlay style={{ width: "600px" }}></video>
+        <video ref={screenRef} autoPlay muted style={{ width: "600px" }}></video>
       </div>
       <div>
-        <video ref={videoRef} autoPlay style={{ width: "250px" }}></video>
+        <video ref={videoRef} autoPlay muted style={{ width: "250px" }}></video>
       </div>
     </div>
   )
