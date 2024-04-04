@@ -1,0 +1,1 @@
+- Recreate what we have (ability to record webcam and screen into separate files) into a standalone app, most likely using Vite
